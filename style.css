@@ -88,6 +88,10 @@ header{
 
 }
 
+hr{
+    visibility: hidden;
+}
+
 .bg-video{
     position: absolute;
     top: 0;
@@ -140,31 +144,50 @@ header{
 }
 
 .about{
-   margin-top: 25%;
+   margin-top: 17%;
 }
 
-.profile-pic{
-    border: 2px solid rgb(88, 87, 87) ;
-    align-items: center;
-    justify-content: center;
+.profile-container{
+    width: 500px;
+    height: 400px;
+    background-color: black;
     display: flex;
-    margin-right: 40%;
-    margin-left: 10%;
-    margin-top: 20%;
-    width: 250px;
-    height: 250px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3%;
+    margin-top: 7%;
 }
 
-.profile-pic:hover{
+
+.inner-border{
+    width: 320px;
+    height: 320px;
+    border: 4px solid #59585a6c;
+    outline: 1px solid #59585a6c;
+    outline-offset: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.inner-border:hover{
     transition: 0.4s;
-    background-color: rgb(39, 59, 78);
+    background-color: rgb(81, 139, 139);
     cursor: pointer;
 }
 
-.align-pic{
-    border: 3px solid rgb(88, 87, 87) ;
-    padding: 30px;
+.avatar{
+    font-size: 50px;
+    margin-bottom: 20px;
+    line-height: 1;
+}
 
+.name{
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px;
 
 }
 
@@ -178,7 +201,7 @@ header{
 
 .details{
     margin-left: 50%;
-    margin-top: -35%;
+    margin-top: -37%;
     margin-right: 5%;
       font-family: "Inconsolata", monospace;
   font-optical-sizing: auto;
@@ -189,39 +212,124 @@ header{
     "wdth" 100;
 }
 
-td{
+.abt-cells{
     border: 1px solid grey;
     padding: 15px;
     width: 270px;
     border-spacing: 15px;
     font-size: 15px;
     line-height: 1.8;
+    transition: padding 0.3s ease-in-out;
 
     
 }
 
-table{
-    border-spacing: 20px;
+.abt-table{
+    border-spacing: 17px;
     margin-left: 48%;
     margin-top: -4%;
+    table-layout: fixed; 
 }
 
 .box-heading{
     font-weight: 700;
 }
 
-td:hover{
-    transition: 1s;
+
+.abt-cells:hover{
     padding: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     position: absolute;
-    cursor: pointer;
 
 }
+
 
 .quote{
     letter-spacing: 1px;
     color: rgb(214, 214, 214);
     font-size: 15px;
+}
+
+
+.curren-title{
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 5%;
+}
+
+
+.boxes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 24px; 
+    max-width: 1200px;
+    width: 100%; 
+    margin-left: 2.5%;
+    margin-top: 7%;
+
+}
+
+.box{
+    width: 400px;
+    height: 160px;
+    border: 2px solid white;    
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.box:hover{
+  transform: translateY(-10px);
+}
+
+.box-header{
+    align-items: left;
+    justify-content: left;
+    display: flex;
+    gap: 16px;
+    margin-right: 9%;
+}
+
+.box-icon{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 17px;
+    border: 1px solid;
+    padding: 5px;
+
+}
+
+.box-title{
+font-size: 1.2rem;
+font-weight: bold;
+margin: 0;
+margin-top: 8%;
+
+}
+
+.box-desc{
+    align-items: left;
+    justify-content: left;
+    display: flex;
+    font-size: 14px;
+    margin-top: -1%;
+    margin-left: 22%;
+}
+
+
+.currently-quote{
+    font-size: small;
+    text-align: center;
+    line-height: 1.0;
+    margin-top: 5%;
+    letter-spacing: 0.5px;
 }
 
