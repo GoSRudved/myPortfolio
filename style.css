@@ -213,14 +213,14 @@ hr{
 }
 
 .abt-cells{
-    border: 1px solid grey;
+    border: 1px solid rgba(31, 31, 31, 0.884);
     padding: 15px;
     width: 270px;
     border-spacing: 15px;
     font-size: 15px;
     line-height: 1.8;
-    transition: padding 0.3s ease-in-out;
-
+    background: rgba(15, 15, 15, 0.788);
+    
     
 }
 
@@ -234,15 +234,6 @@ hr{
 .box-heading{
     font-weight: 700;
 }
-
-
-.abt-cells:hover{
-    padding: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    position: absolute;
-
-}
-
 
 .quote{
     letter-spacing: 1px;
@@ -308,10 +299,11 @@ hr{
 }
 
 .box-title{
-font-size: 1.2rem;
-font-weight: bold;
-margin: 0;
-margin-top: 8%;
+    
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 8%;
 
 }
 
@@ -322,6 +314,7 @@ margin-top: 8%;
     font-size: 14px;
     margin-top: -1%;
     margin-left: 22%;
+    color: rgb(175, 174, 174);
 }
 
 
@@ -331,5 +324,78 @@ margin-top: 8%;
     line-height: 1.0;
     margin-top: 5%;
     letter-spacing: 0.5px;
+    color: rgb(214, 214, 214);
 }
 
+.interest-title{
+    font-size: 65px;
+    margin-top: 17%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: -3px;
+
+}
+
+.interest-subtitle{
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 0.6;
+    margin-top: -2%;
+    color: rgb(175, 174, 174);
+         font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+  font-variation-settings:
+    "wdth" 100;
+    letter-spacing: -1px;
+}
+
+.interest-boxes{
+     display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 24px; 
+    max-width: 1200px;
+    width: 100%; 
+    margin-left: 5%;
+    margin-top: 7%;
+
+
+}
+
+.interest-box{
+    margin-top: 2%;
+    width: 375px;
+    height: 275px;
+    border: 2px solid #59585a6c;
+}
+
+.int-box-contents{
+    margin-top: 29%;
+}
+
+.int-box-header{
+    letter-spacing: -1px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 9%;
+}
+
+.int-box-desc{
+    text-align: left;
+    margin-left: 9%;
+    margin-top: -3%;
+    margin-right: 5%;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgb(175, 174, 174);
+          font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
