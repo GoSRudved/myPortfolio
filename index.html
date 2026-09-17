@@ -34,9 +34,9 @@
                     opportunities
                 </p>
 
-                <h1 style="font-size: 50px;">Hi, &nbsp;I'm <br><span style="color: cyan;">GoS_Rudved</span>
+                <h1 style="font-size: 50px;">Hi, I'm <br><span style="color: cyan;">GoS_Rudved</span>
                     <br>
-                    (known as Rudved)
+                    (known as <u>Rudved</u>)
                 </h1>
 
 
@@ -304,21 +304,33 @@
                     </div>
 
                     <div class="interest-box">
-                        <div class="int-box-contents">
-                            <div class="int-box-header">
-                                <h3 class="int-box-title">MICHAEL JACKSON</h3>
+                        <div class="mj-image"><img src="mj-image.jpg" alt="michael jackson">
+                            <div class="int-box-contents" style="margin-top: -5%;">
+                                <div class="int-box-header">
+
+                                    <h3 class="int-box-title">MICHAEL JACKSON 🎩</h3>
+                                </div>
+
+                                <p class="int-box-desc">OMGGGG I LOVEE HIM!!! HE MAKES THE
+                                    BEST SONGS I'VE EVER HEARD,
+                                    IDC
+                                    IF YALL HATE HIM, HE IS DA GOAT!!!!</p>
                             </div>
-                            <p class="int-box-desc">OMGGGG I LOVEE HIM!!! HE MAKES THE BEST SONGS I'VE EVER HEARD, IDC
-                                IF YALL HATE HIM, HE IS DA GOAT!!!!</p>
+
+
+
                         </div>
                     </div>
+
 
                     <div class="interest-box">
                         <div class="int-box-contents">
                             <div class="int-box-header">
-                                <h3 class="int-box-title"></h3>
+                                <h3 class="int-box-title">Documentaries</h3>
                             </div>
-                            <p class="int-box-desc"></p>
+                            <p class="int-box-desc">I absolutely love watching documentaries because they offer
+                                a
+                                fascinating window into real-world stories and hidden histories.</p>
                         </div>
                     </div>
 
@@ -326,7 +338,35 @@
                 </div>
             </div>
 
+            <div class="get-in">
+
+                <h1 class="get-title">GET IN TOUCH</h1>
+                <br><br><br><br>
+                <div class="get-contents">
+                    <p class="get-intro">Have a question or want to collaborate? I'd love to<br> hear from you! Drop me
+                        a
+                        message and I'll get
+                        back
+                        to <br> you as soon as possible.</p>
+
+                </div>
+            </div>
+
     </div>
+
+    <audio id="soundEffect" src="button-hover.mp3"></audio>
+
+    <script>
+        const elements = document.querySelectorAll(".interest-box");
+        const audio = document.getElementById("soundEffect");
+
+        elements.forEach((element) => {
+            element.addEventListener("mouseenter", () => {
+                audio.currentTime = 0; // Rewind the sound to the start
+                audio.play();
+            });
+        });
+    </script>
 
     </main>
 
