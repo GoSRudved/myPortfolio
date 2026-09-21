@@ -66,7 +66,7 @@
 
         </header>
 
-        <hr>
+        <hr class="header-hr">
 
         <main>
 
@@ -341,15 +341,65 @@
             <div class="get-in">
 
                 <h1 class="get-title">GET IN TOUCH</h1>
-                <br><br><br><br>
+                <br><br><br>
                 <div class="get-contents">
                     <p class="get-intro">Have a question or want to collaborate? I'd love to<br> hear from you! Drop me
                         a
                         message and I'll get
                         back
                         to <br> you as soon as possible.</p>
+                    <div class="get-boxes">
+                        <div class="get-box">
+                            <div class="get-box-header">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+
+                            <p class="get-box-title">EMAIL <br><span
+                                    class="get-box-desc">gosrudvedofficial@gmail.com</span>
+                            </p>
+
+                        </div>
+
+                        <div class="get-box">
+                            <div class="get-box-header">
+                                <i class="fa-regular fa-message"></i>
+                            </div>
+
+                            <p class="get-box-title">DISCORD <br> <span class="get-box-desc">gos_rudved</span></p>
+
+                        </div>
+
+                        <div class="get-box">
+                            <div class="get-box-header">
+                                📍
+                            </div>
+
+                            <p class="get-box-title">LOCATION <br> <span class="get-box-desc">India 🇮🇳</span></p>
+                        </div>
+                    </div>
+
+                    <div class="get-form">
+                        <div class="form">
+                            <form action="https://formspree.io/f/mzezdbjy" method="post">
+
+                                <input class="name-fill" type="text" name="Name" placeholder="Your Name" required>
+
+                                <input class="email-fill" type="email" name="email" placeholder="Your Email" required>
+
+                                <textarea class="msg-fill" name="message" placeholder="Your Message" minlength="0"
+                                    maxlength="1000" required></textarea>
+
+                                <button class="submit-btn" type="submit"><b>SEND MESSAGE</b></button>
+
+                            </form>
+                        </div>
+                    </div>
+
+
 
                 </div>
+
+
             </div>
 
     </div>
@@ -366,11 +416,46 @@
                 audio.play();
             });
         });
+
+        import { initForm } from '@formspree/ajax';
+
+        initForm({
+            formElement: '#contact-form',
+            formId: 'YOUR_FORM_ID',
+        });
     </script>
 
     </main>
 
+    <footer>
+        <hr class="footer-hr">
+
+        <div class="footer-container">
+
+            <div class="footer-content">
+                <h3>GoS_Rudved</h3>
+                <span>Student | Developer | Tech Enthusiast</span>
+            </div>
+            <div class="footer-content">
+                <h5>QUICK LINKS</h5>
+                <ul class="footer-list">
+                    <li><a href="">About</a></li>
+                    <li><a href="">Skills</a></li>
+                    <li><a href="">Interests</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h5>CONNECT</h5>
+                <li><a href=""></a></li>
+            </div>
+        </div>
+
+    </footer>
+
     </div>
+
+    <script src="https://cnd.url or via npm"></script>
 </body>
 
 </html>

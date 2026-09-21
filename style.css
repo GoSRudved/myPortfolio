@@ -11,6 +11,8 @@ body{
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
+    /* margin: 0; 
+  overflow-x: hidden;  */
 }
 
 
@@ -88,7 +90,7 @@ header{
 
 }
 
-hr{
+.header-hr{
     visibility: hidden;
 }
 
@@ -174,8 +176,7 @@ hr{
 
 .inner-border:hover{
     transition: 0.4s;
-    background-color: rgb(81, 139, 139);
-    cursor: pointer;
+    background-color: rgba(0, 92, 92, 0.623);
 }
 
 .avatar{
@@ -213,7 +214,7 @@ hr{
 }
 
 .abt-cells{
-    border: 1px solid rgba(31, 31, 31, 0.884);
+    border: 2px solid rgba(31, 31, 31, 0.884);
     padding: 15px;
     width: 270px;
     border-spacing: 15px;
@@ -250,6 +251,8 @@ hr{
     justify-content: center;
     display: flex;
     margin-top: 5%;
+   text-decoration: underline wavy 7px rgb(15, 247, 247);
+
 }
 
 
@@ -359,8 +362,8 @@ hr{
     gap: 24px; 
     max-width: 1200px;
     width: 100%; 
-    margin-left: 5%;
-    margin-top: 7%;
+    margin-left: 5.5%;
+    margin-top: 7%; 
 
 }
 
@@ -423,6 +426,8 @@ hr{
 
 .interest-box:hover{
     transform: scale(1.03); 
+    border-color: rgba(0, 255, 255, 0.466);
+    background-color: rgba(0, 34, 34, 0.438);
 }
 
 /* white color */
@@ -437,8 +442,8 @@ hr{
      border-radius: 2px;
     
 
-    border-top: 3px solid #fff;   
-    border-right: 3px solid #fff; 
+    border-top: 3px solid rgb(108, 255, 255);   
+    border-right: 3px solid rgb(108, 255, 255);   
 }
 
 
@@ -469,16 +474,21 @@ hr{
     height: 25px;
 } 
 
+.get-in{
+    padding-bottom: 10%;
+}
+
 .get-title{
     align-items: center;
     justify-content: center;
     display: flex;
-    margin-top: 20%;
+    margin-top: 17%;
     font-size: 55px;
 }
 
 .get-contents{
     display: flex;
+    flex-direction: column;
 
 }
 
@@ -489,10 +499,146 @@ hr{
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
-    line-height: 1.6;
+    line-height: 1.5;
     font-size: 15px;
     color: rgb(202, 202, 202);
-    margin-left: 10%;
+    margin-left: 17%;
 
 
+}
+
+.get-boxes{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 17%;
+    margin-top: 1%;
+}
+
+.get-box{
+    border: 2px solid;
+    width: 420px;
+    height: 75px;
+    display: flex;
+    background: rgba(15, 15, 15, 0.788);
+    border: 2px solid rgba(31, 31, 31, 0.884);
+      font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.get-box-header{
+    font-size: 25px;
+    margin-top: 5%;
+    margin-left: 4%;
+}
+
+.get-box-title{
+    font-size: 16px;
+    margin-left: 4%;
+    letter-spacing: 2;
+    
+}  
+    
+.get-box-desc{
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+form{
+    width: 31%;
+    margin-left: 53%;
+    margin-top: -27%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    caret-color: cyan; 
+
+
+}
+
+input{
+    background-color: #000;
+    border: 2px solid rgba(31, 31, 31, 0.884);
+    letter-spacing: 1;
+    font-size: 16px;
+    color: cyan;
+    padding-left: 15px;
+    padding-bottom: 5px;
+ font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+input::placeholder{
+    color: rgb(177, 176, 176);
+    font-size: 15px;
+}
+
+.name-fill{
+    height: 37px;
+    background-color: #000;
+    color: cyan;
+}
+
+.email-fill{
+    height: 40px;
+    background-color: #000;
+    color: cyan;
+}
+
+.msg-fill{
+    resize: none;
+    border: 2px solid rgba(31, 31, 31, 0.884);
+    height: 100px;
+    background-color: #000;
+    color: cyan;
+    padding-left: 10px;
+    padding-top: 10px;
+    letter-spacing: 1px;
+    font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+textarea::placeholder{
+    color: rgb(177, 176, 176);
+}
+
+.submit-btn{
+    border: 2px solid rgba(31, 31, 31, 0.884);
+    height: 43px;
+    background-color: #000;
+    font-size: 18px;
+    letter-spacing: -0.5;
+    color: #fff;
+    cursor: pointer;
+      font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.submit-btn:hover{
+    transform: scale(1.09);
+    color: cyan;
+}
+
+.footer-hr{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    border: 1px solid rgba(31, 31, 31, 0.884);
 }
