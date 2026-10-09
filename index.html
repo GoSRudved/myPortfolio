@@ -17,6 +17,10 @@
 
 <body>
 
+    <marquee behavior="alternate" direction=""><span>🚧 UNDER DEVELOPMENT! 🚧 UNDER DEVELOPMENT!🚧 UNDER DEVELOPMENT!🚧
+            UNDER
+            DEVELOPMENT!🚧 UNDER DEVELOPMENT!🚧 UNDER DEVELOPMENT!</span></marquee>
+
     <div class="container">
 
         <header>
@@ -24,7 +28,6 @@
             <video autoplay loop muted class="bg-video">
                 <source src="bg-video.mp4" type="video/mp4">
             </video>
-
             <div class="header-contents">
                 <p
                     style="color: white; border: 2px solid white;padding: 10px; border-radius: 100px;
@@ -49,9 +52,9 @@
                     <span>
                         Follow me:
                         <a href="https://www.instagram.com/gos_rudved/" target="_blank" title="Instagram"><i
-                                class="fa-brands fa-instagram"></i></a>
+                                class="fa-brands fa-instagram" id="instagram-logo"></i></a>
                         <a href="https://x.com/GoS_Rudved" target="_blank" title="Twitter"><i
-                                class="fa-brands fa-x-twitter"></i></a>
+                                class="fa-brands fa-x-twitter" id="twitter-logo"></i></a>
                         <a href="https://discord.com/users/1377898593863598110" target="_blank" title="Discord"><i
                                 class="fa-brands fa-discord"></i></a>
                     </span>
@@ -88,7 +91,7 @@
                         <section class="details">
                             <p>Hey there! 👋 I'm <strong>GoS_Rudved</strong>, a passionate student and learning
                                 developer.
-                                I'm
+                                I'm 13yr old,
                                 deeply
                                 interested in
                                 building innovative solutions that make a real impact. <br> <br>
@@ -137,7 +140,8 @@
 
 
                             <tr>
-                                <td class="abt-cells"><span class="box-heading">EMAIL</span> <br> N/A</td>
+                                <td class="abt-cells"><span class="box-heading">EMAIL</span> <br>
+                                    gosrudvedofficial@gmail.com</td>
                                 <td class="abt-cells"><span class="box-heading">DISCORD</span> <br> gos_rudved</td>
                             </tr>
 
@@ -226,8 +230,9 @@
                                 <div class="box-icon"> <i class="fa-solid fa-code"></i></div>
                                 <h3 class="box-title">Practicing Code</h3>
                             </div>
-                            <p class="box-desc">Learning to code even better, <br> i dont care if AI is advanced in
-                                coding than humans.</p>
+                            <p class="box-desc">Learning to code even better, <br> i hate the fact that AI outskills
+                                coding
+                                than humans.</p>
                         </div>
                     </div>
 
@@ -387,7 +392,7 @@
                                 <input class="email-fill" type="email" name="email" placeholder="Your Email" required>
 
                                 <textarea class="msg-fill" name="message" placeholder="Your Message" minlength="0"
-                                    maxlength="1000" required></textarea>
+                                    maxlength="5000" required></textarea>
 
                                 <button class="submit-btn" type="submit"><b>SEND MESSAGE</b></button>
 
@@ -412,7 +417,7 @@
 
         elements.forEach((element) => {
             element.addEventListener("mouseenter", () => {
-                audio.currentTime = 0; // Rewind the sound to the start
+                audio.currentTime = 0; // rewind the sound to the start
                 audio.play();
             });
         });
@@ -447,9 +452,16 @@
             </div>
             <div class="footer-content">
                 <h5>CONNECT</h5>
-                <li><a href=""></a></li>
+                <li><a href="" target="_blank" title="Twitter (X)"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="" target="_blank" title="Email"><i class="fa-regular fa-envelope"></i></a></li>
+            </div>
+            <div class="bottom-bar">
+                <p>&copy; 2026 Rudved Dahikar. All rights reserved.</p>
+                <span></span>
             </div>
         </div>
+
 
     </footer>
 

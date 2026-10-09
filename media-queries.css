@@ -1,0 +1,491 @@
+/* ==========================================================================
+   media-queries.css
+   Loaded AFTER style.css, so these rules override the desktop layout.
+   Desktop (above 1024px) is left exactly as it was.
+
+   Breakpoints
+   - max-width: 1024px  tablets and below: stacked layout, 2-column grids
+   - max-width: 640px   phones: single column, smaller type
+   - max-width: 380px   very small phones: tighter spacing
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   Touch devices: hover effects stick after a tap and scaling causes sideways
+   scrolling, so switch them off where there's no real hover.
+   -------------------------------------------------------------------------- */
+@media (hover: none) {
+
+    .box:hover,
+    .submit-btn:hover {
+        transform: none;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Interest boxes on tablets and phones (1024px and below):
+   - no hover effect (scale, border and background colour change)
+   - the corner accents (::before / ::after) stay visible all the time
+   Desktop keeps the original hover effect.
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+    .interest-box:hover {
+        transform: none;
+        border-color: #59585a6c;
+        /* same as the resting border in style.css */
+        background-color: transparent;
+    }
+
+    .interest-box::before,
+    .interest-box::after,
+    .interest-box:hover::before,
+    .interest-box:hover::after {
+        width: 25px;
+        /* full size, same as style.css shows on hover */
+        height: 25px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .arrow {
+        animation: none;
+    }
+}
+
+
+/* --------------------------------------------------------------------------
+   Tablets and below
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+
+    /* Safety net so nothing can cause sideways scrolling */
+    html {
+        overflow-x: hidden;
+    }
+
+    img,
+    video {
+        max-width: 100%;
+    }
+
+    /* ---------- Header ---------- */
+
+    header {
+        position: relative;
+        /* video now sizes to the header, not the viewport */
+        padding: 32px 40px 72px;
+    }
+
+    .bg-video {
+        top: 0;
+        margin-top: 0;
+        /* removes the desktop "temporary" offset */
+        height: 100%;
+    }
+
+    .links span {
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: 10px;
+    }
+
+    /* ---------- About ---------- */
+
+    .about {
+        margin-top: 80px;
+    }
+
+    .abt-head {
+        display: block;
+        margin-left: 0;
+        text-align: center;
+        font-size: 44px;
+    }
+
+    .profile-container {
+        width: 100%;
+        height: auto;
+        margin: 32px auto 0;
+        padding: 16px 0;
+    }
+
+    .inner-border {
+        width: min(320px, calc(100vw - 80px));
+        height: min(320px, calc(100vw - 80px));
+    }
+
+    .details {
+        max-width: 720px;
+        margin: 24px auto 0;
+        padding: 0 24px;
+    }
+
+    .details cite {
+        display: block;
+        margin-left: 0 !important;
+        /* overrides inline margin-left: 77% */
+        text-align: right;
+    }
+
+    .details>br {
+        display: none;
+    }
+
+    /* The table becomes a 2-column grid of cards */
+    .abt-table {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        max-width: 720px;
+        margin: 24px auto 0;
+        padding: 0 24px;
+        border-spacing: 0;
+    }
+
+    .abt-table tbody,
+    .abt-table tr {
+        display: contents;
+    }
+
+    .abt-cells {
+        width: auto;
+        box-sizing: border-box;
+        overflow-wrap: anywhere;
+    }
+
+    /* The row of <br> tags that pushes the quote down on desktop */
+    .about>br {
+        display: none;
+    }
+
+    .about>center {
+        display: block;
+        margin-top: 56px;
+        padding: 0 24px;
+    }
+
+    .about>center+center {
+        margin-top: 16px;
+    }
+
+    /* ---------- Currently ---------- */
+
+    .curren-title {
+        margin-top: 80px;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .boxes,
+    .interest-boxes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        width: auto;
+        max-width: none;
+        margin: 40px 24px 0;
+    }
+
+    .box {
+        width: auto;
+        height: auto;
+        min-height: 160px;
+        box-sizing: border-box;
+        padding-bottom: 20px;
+    }
+
+    .box-header {
+        align-items: center;
+        margin: 20px 16px 0 0;
+    }
+
+    .box-icon,
+    .box-title {
+        margin-top: 0;
+    }
+
+    .box-desc {
+        display: block;
+        margin: 14px 17px 0;
+    }
+
+    .box-desc br,
+    .currently-quote br,
+    .get-intro br {
+        display: none;
+        /* forced line breaks look ragged on small screens */
+    }
+
+    .currently-quote {
+        margin: 32px 24px 0;
+        line-height: 1.5;
+    }
+
+    /* ---------- Interests ---------- */
+
+    .interest-title {
+        margin-top: 80px;
+        font-size: 48px;
+        letter-spacing: -2px;
+        text-align: center;
+    }
+
+    .interest-subtitle {
+        margin: 8px 24px 0;
+        font-size: 22px;
+        line-height: 1.4;
+    }
+
+    .interest-box {
+        width: auto;
+        height: auto;
+        min-height: 0;
+        margin-top: 0;
+        box-sizing: border-box;
+        padding-bottom: 24px;
+    }
+
+    .int-box-contents {
+        margin-top: 0;
+        padding-top: 40px;
+    }
+
+    .int-box-header {
+        margin-left: 20px;
+    }
+
+    .int-box-title {
+        margin: 0;
+    }
+
+    .int-box-desc {
+        margin: 8px 20px 0;
+    }
+
+    /* Michael Jackson card: the image no longer has a fixed height, so the
+       text below it can't spill out of the box */
+    .mj-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .mj-image img {
+        display: block;
+        height: 120px;
+    }
+
+    .mj-image .int-box-contents {
+        margin-top: 12px !important;
+        /* overrides inline margin-top: -5% */
+        padding-top: 0;
+    }
+
+    /* ---------- Get in touch ---------- */
+
+    .get-in {
+        padding-bottom: 64px;
+    }
+
+    .get-in>br {
+        display: none;
+    }
+
+    .get-title {
+        margin: 80px 24px 24px;
+        font-size: 44px;
+        text-align: center;
+    }
+
+    /* One centered column, so the intro, boxes and form share the same width */
+    .get-contents {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 584px;
+        /* 560px of content + 24px side padding */
+        margin: 0 auto;
+        padding: 0 24px;
+    }
+
+    .get-intro {
+        margin: 0;
+    }
+
+    .get-boxes {
+        margin: 24px 0 0;
+    }
+
+    .get-box {
+        width: auto;
+        height: auto;
+        min-height: 75px;
+        box-sizing: border-box;
+        align-items: center;
+        padding: 12px 0;
+    }
+
+    /* Fixed-width icon slot so EMAIL / DISCORD / LOCATION text lines up */
+    .get-box-header {
+        flex-shrink: 0;
+        width: 32px;
+        margin: 0 0 0 20px;
+        text-align: center;
+    }
+
+    .get-box-title {
+        margin: 0 12px 0 16px;
+        min-width: 0;
+        line-height: 1.5;
+    }
+
+    .get-box-desc {
+        overflow-wrap: anywhere;
+    }
+
+    form {
+        width: auto;
+        max-width: none;
+        margin: 32px 0 0;
+    }
+
+    input,
+    textarea {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    /* 16px stops iOS Safari zooming in when a field is tapped */
+    .msg-fill {
+        font-size: 16px;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .footer-container {
+        padding: 24px;
+    }
+
+    .footer-content {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* --------------------------------------------------------------------------
+   Phones
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+
+    marquee {
+        font-size: 13px;
+    }
+
+    header {
+        padding: 24px 20px 64px;
+    }
+
+    /* Overrides the inline font-size: 50px on the hero heading */
+    header h1 {
+        font-size: clamp(28px, 9vw, 40px) !important;
+        line-height: 1.25;
+    }
+
+    header h2 {
+        font-size: 20px;
+    }
+
+    #instagram-logo,
+    #twitter-logo,
+    .fa-discord {
+        width: 44px;
+        /* comfortable tap target */
+        height: 44px;
+    }
+
+    /* Single-column layouts */
+    .boxes,
+    .interest-boxes {
+        grid-template-columns: 1fr;
+        margin: 32px 20px 0;
+    }
+
+    .abt-table {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .abt-cells {
+        text-align: center;
+    }
+
+    .details {
+        padding: 0 20px;
+        font-size: 15px;
+    }
+
+    .abt-head {
+        font-size: 36px;
+    }
+
+    .curren-title {
+        font-size: 30px;
+        text-decoration-thickness: 5px;
+    }
+
+    .interest-title {
+        font-size: 34px;
+        letter-spacing: -1px;
+    }
+
+    .interest-subtitle {
+        margin: 8px 20px 0;
+        font-size: 18px;
+    }
+
+    .get-title {
+        margin: 64px 20px 24px;
+        font-size: 32px;
+    }
+
+    .get-contents {
+        padding: 0 20px;
+    }
+
+    .get-boxes {
+        margin-top: 20px;
+    }
+
+    form {
+        margin-top: 28px;
+    }
+
+    .about>center {
+        padding: 0 20px;
+    }
+}
+
+
+/* --------------------------------------------------------------------------
+   Very small phones
+   -------------------------------------------------------------------------- */
+@media (max-width: 380px) {
+
+    #instagram-logo,
+    #twitter-logo {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .abt-cells {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .get-box-header {
+        margin-left: 14px;
+        font-size: 20px;
+    }
+
+    .get-box-title {
+        margin-left: 12px;
+    }
+}

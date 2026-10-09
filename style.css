@@ -4,6 +4,14 @@ html{
     scroll-behavior: smooth;
 }
 
+marquee {
+  width: 100%;
+  color: black;
+  background-color: yellow;
+}
+
+
+
 body{
     background: black;
     color: white;
@@ -17,7 +25,7 @@ body{
 
 
  
- .fa-instagram {
+ #instagram-logo {
    font-size: 20px;
     color: white;
     padding: 1px;
@@ -34,7 +42,7 @@ body{
     
 }
 
-.fa-x-twitter {
+#twitter-logo {
     font-size: 20px;
     color: white;
     padding: 1px;
@@ -96,10 +104,11 @@ header{
 
 .bg-video{
     position: absolute;
-    top: 0;
+    /* top: auto; */ /* temporary, enable later */
     left: 0;
     width: 100%;
     height: 100%;
+    margin-top: -2.7%; /* temporary!!!, remove later*/
     object-fit: cover;
     z-index: 1;
     
@@ -427,7 +436,7 @@ header{
 .interest-box:hover{
     transform: scale(1.03); 
     border-color: rgba(0, 255, 255, 0.466);
-    background-color: rgba(0, 34, 34, 0.438);
+    background-color: rgba(0, 51, 51, 0.397);
 }
 
 /* white color */
