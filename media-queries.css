@@ -15,7 +15,6 @@
    scrolling, so switch them off where there's no real hover.
    -------------------------------------------------------------------------- */
 @media (hover: none) {
-
     .box:hover,
     .submit-btn:hover {
         transform: none;
@@ -31,8 +30,7 @@
 @media (max-width: 1024px) {
     .interest-box:hover {
         transform: none;
-        border-color: #59585a6c;
-        /* same as the resting border in style.css */
+        border-color: #59585a6c;     /* same as the resting border in style.css */
         background-color: transparent;
     }
 
@@ -40,8 +38,7 @@
     .interest-box::after,
     .interest-box:hover::before,
     .interest-box:hover::after {
-        width: 25px;
-        /* full size, same as style.css shows on hover */
+        width: 25px;                 /* full size, same as style.css shows on hover */
         height: 25px;
     }
 }
@@ -71,15 +68,13 @@
     /* ---------- Header ---------- */
 
     header {
-        position: relative;
-        /* video now sizes to the header, not the viewport */
+        position: relative;          /* video now sizes to the header, not the viewport */
         padding: 32px 40px 72px;
     }
 
     .bg-video {
         top: 0;
-        margin-top: 0;
-        /* removes the desktop "temporary" offset */
+        margin-top: 0;               /* removes the desktop "temporary" offset */
         height: 100%;
     }
 
@@ -123,12 +118,11 @@
 
     .details cite {
         display: block;
-        margin-left: 0 !important;
-        /* overrides inline margin-left: 77% */
+        margin-left: 0 !important;   /* overrides inline margin-left: 77% */
         text-align: right;
     }
 
-    .details>br {
+    .details > br {
         display: none;
     }
 
@@ -155,17 +149,17 @@
     }
 
     /* The row of <br> tags that pushes the quote down on desktop */
-    .about>br {
+    .about > br {
         display: none;
     }
 
-    .about>center {
+    .about > center {
         display: block;
         margin-top: 56px;
         padding: 0 24px;
     }
 
-    .about>center+center {
+    .about > center + center {
         margin-top: 16px;
     }
 
@@ -212,8 +206,7 @@
     .box-desc br,
     .currently-quote br,
     .get-intro br {
-        display: none;
-        /* forced line breaks look ragged on small screens */
+        display: none;               /* forced line breaks look ragged on small screens */
     }
 
     .currently-quote {
@@ -275,8 +268,7 @@
     }
 
     .mj-image .int-box-contents {
-        margin-top: 12px !important;
-        /* overrides inline margin-top: -5% */
+        margin-top: 12px !important;  /* overrides inline margin-top: -5% */
         padding-top: 0;
     }
 
@@ -286,7 +278,7 @@
         padding-bottom: 64px;
     }
 
-    .get-in>br {
+    .get-in > br {
         display: none;
     }
 
@@ -300,8 +292,7 @@
     .get-contents {
         box-sizing: border-box;
         width: 100%;
-        max-width: 584px;
-        /* 560px of content + 24px side padding */
+        max-width: 584px;            /* 560px of content + 24px side padding */
         margin: 0 auto;
         padding: 0 24px;
     }
@@ -361,11 +352,19 @@
     /* ---------- Footer ---------- */
 
     .footer-container {
-        padding: 24px;
+        padding: 40px 24px 24px;
     }
 
-    .footer-content {
-        margin-bottom: 20px;
+    .footer-top {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;         /* name and tagline get their own row */
+    }
+
+    .bottom-bar {
+        margin-top: 48px;
     }
 }
 
@@ -396,8 +395,7 @@
     #instagram-logo,
     #twitter-logo,
     .fa-discord {
-        width: 44px;
-        /* comfortable tap target */
+        width: 44px;                 /* comfortable tap target */
         height: 44px;
     }
 
@@ -458,8 +456,35 @@
         margin-top: 28px;
     }
 
-    .about>center {
+    .about > center {
         padding: 0 20px;
+    }
+
+    /* Footer: one centered column */
+    .footer-container {
+        padding: 36px 20px 24px;
+        text-align: center;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .footer-socials {
+        justify-content: center;
+    }
+
+    .bottom-bar {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 36px;
+        text-align: center;
+    }
+
+    .made-with,
+    .based-in {
+        text-align: center;
     }
 }
 
