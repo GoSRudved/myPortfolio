@@ -17,9 +17,12 @@
 
 <body>
 
-    <marquee behavior="alternate" direction=""><span>🚧 UNDER DEVELOPMENT! 🚧 UNDER DEVELOPMENT!🚧 UNDER DEVELOPMENT!🚧
+    <script src="script.js"></script>
+
+
+    <!-- <marquee behavior="alternate" direction=""><span>🚧 UNDER DEVELOPMENT! 🚧 UNDER DEVELOPMENT!🚧 UNDER DEVELOPMENT!🚧
             UNDER
-            DEVELOPMENT!🚧 UNDER DEVELOPMENT!🚧 UNDER DEVELOPMENT!</span></marquee>
+            DEVELOPMENT!🚧 UNDER DEVELOPMENT!🚧 UNDER DEVELOPMENT!</span></marquee> -->
 
     <div class="container">
 
@@ -173,10 +176,10 @@
                 <p class="curren-title" id="currently">CURRENTLY</p>
 
                 <div class="boxes">
-                    <div class="box">
+                    <div class="box" id="highlight-box">
                         <div class="box-contents">
                             <div class="box-header">
-                                <div class="box-icon"><i class="fa-solid fa-brain"></i></div>
+                                <div class="box-icon" id="box-icon-highlight"><i class="fa-solid fa-brain"></i></div>
                                 <h3 class="box-title">Philosophy & Psychology </h3>
                             </div>
 
@@ -188,10 +191,10 @@
                         </div>
                     </div>
 
-                    <div class="box" id="highlight-box">
+                    <div class="box" id="highlight-box-2">
                         <div class="box-contents">
                             <div class="box-header">
-                                <div class="box-icon"> <i class="fa-solid fa-globe"></i></div>
+                                <div class="box-icon" id="box-icon-highlight-2"> <i class="fa-solid fa-globe"></i></div>
                                 <h3 class="box-title">Geopolitics</h3>
                             </div>
                             <p class="box-desc">Fascinated by international <br> relations, global politics, and how
@@ -201,10 +204,10 @@
                         </div>
                     </div>
 
-                    <div class="box">
+                    <div class="box" id="highlight-box">
                         <div class="box-contents">
                             <div class="box-header">
-                                <div class="box-icon"><i class="fa-solid fa-bolt"></i> </div>
+                                <div class="box-icon" id="box-icon-highlight"><i class="fa-solid fa-bolt"></i> </div>
                                 <h3 class="box-title">AI & Machine Learning</h3>
                             </div>
                             <p class="box-desc">Diving deep into AI, neural <br> networks, and how machines learn to
@@ -214,10 +217,11 @@
                         </div>
                     </div>
 
-                    <div class="box" id="highlight-box">
+                    <div class="box" id="highlight-box-2">
                         <div class="box-contents">
                             <div class="box-header">
-                                <div class="box-icon"> <i class="fa-solid fa-book-open"></i></div>
+                                <div class="box-icon" id="box-icon-highlight-2"> <i class="fa-solid fa-book-open"></i>
+                                </div>
                                 <h3 class="box-title">German Language</h3>
                             </div>
                             <p class="box-desc">Ultimately, this journey into German <br>will expand my linguistic <br>
@@ -226,10 +230,10 @@
                         </div>
                     </div>
 
-                    <div class="box">
+                    <div class="box" id="highlight-box">
                         <div class="box-contents">
                             <div class="box-header">
-                                <div class="box-icon"> <i class="fa-solid fa-code"></i></div>
+                                <div class="box-icon" id="box-icon-highlight"> <i class="fa-solid fa-code"></i></div>
                                 <h3 class="box-title">Practicing Code</h3>
                             </div>
                             <p class="box-desc">Learning to code even better, <br> i hate the fact that AI outskills
@@ -238,10 +242,11 @@
                         </div>
                     </div>
 
-                    <div class="box" id="highlight-box">
+                    <div class="box" id="highlight-box-2">
                         <div class="box-contents">
                             <div class="box-header">
-                                <div class="box-icon"> <i class="fa-solid fa-school"></i></div>
+                                <div class="box-icon" id="box-icon-highlight-2"> <i class="fa-solid fa-school"></i>
+                                </div>
                                 <h3 class="box-title">In School</h3>
                             </div>
                             <p class="box-desc">I am currently balancing my academic coursework as a dedicated student
@@ -423,13 +428,6 @@
                 audio.play();
             });
         });
-
-        import { initForm } from '@formspree/ajax';
-
-        initForm({
-            formElement: '#contact-form',
-            formId: 'YOUR_FORM_ID',
-        });
     </script>
 
     </main>
@@ -441,7 +439,7 @@
 
             <div class="footer-top">
                 <div class="footer-content footer-brand">
-                    <h3>GoS_Rudved</h3>
+                    <h3 class="footer-name">GoS_Rudved</h3>
                     <span>Student | Developer | Tech Enthusiast</span>
                 </div>
 
@@ -469,7 +467,7 @@
             </div>
 
             <div class="bottom-bar">
-                <p class="copyright">&copy; 2026 Rudved Dahikar. All rights reserved.</p>
+                <p class="copyright" style="color: cyan;">&copy; 2026 Rudved Dahikar. All rights reserved.</p>
                 <p class="made-with">Made with <i class="fa-regular fa-heart"></i> and code</p>
                 <p class="based-in">BASED IN INDIA &#127470;&#127475;</p>
             </div>
